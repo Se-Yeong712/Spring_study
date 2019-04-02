@@ -14,11 +14,31 @@
 	-->
 	
 	<!-- step3에서 사용 -->
-	<bean id = "tv" class = "com.myspring.step3.SamsungTV">
-	<constructor-arg index="0" ref = "sony"/>	<!-- 인자로 전달되는 데이터 -> <bean>으로 등록된 객체 :  ref -->
-	<constructor-arg index="1" value = "2700000"/>				<!-- -> 기본데이터(문자열, 정수형) : value -->
+<!-- 	<bean id = "tv" class = "com.myspring.step3.SamsungTV">
+	<constructor-arg index="0" ref = "sony"/>	인자로 전달되는 데이터 -> <bean>으로 등록된 객체 :  ref
+	<constructor-arg index="1" value = "2700000"/>				-> 기본데이터(문자열, 정수형) : value
 	</bean>
 
-	<bean id="sony" class="com.myspring.step3.SonySpeaker" />
+	<bean id="sony" class="com.myspring.step3.SonySpeaker" /> -->
+
+	<!-- step4에서 사용 -->
+<!-- 	<bean id = "tv" class = "com.myspring.step4.SamsungTV">
+	<constructor-arg ref = "apple"/>
+	<constructor-arg value = "2700000"/>
+	</bean>
+	
+	<bean id="sony" class="com.myspring.step4.SonySpeaker"/>
+	<bean id="apple" class="com.myspring.step4.AppleSpeaker"/>
+	 -->
+
+	<!-- step5에서 사용 -->
+	<bean id = "tv" class = "com.myspring.step5.SamsungTV">
+	<property name="speaker" ref = "apple"/>	<!-- setter는 property를 사용 -->
+	<property name="price" value ="2700000"/>
+	</bean>
+	
+	<bean id="sony" class="com.myspring.step5.SonySpeaker"/>
+	<bean id="apple" class="com.myspring.step5.AppleSpeaker"/>
+
 
 </beans>
