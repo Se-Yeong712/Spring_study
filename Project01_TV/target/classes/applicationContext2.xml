@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+<!-- prototype 실습 -->
+<!-- <bean id ="tv" class = "com.myspring.step5.SamsungTV" init-method="initMethod" destroy-method="destroyMethod" scope="prototype"/> -->
+
+<!-- singleton 실습 -->
+<bean id ="tv" class = "com.myspring.step5.SamsungTV" init-method="initMethod" destroy-method="destroyMethod" scope="singleton"/>
+
+
+</beans>
