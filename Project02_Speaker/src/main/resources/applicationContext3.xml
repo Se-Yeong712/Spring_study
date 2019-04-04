@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- list collection사용 (step7에서 사용) -->
+	<!-- <bean id="collectionBean" class="com.myspring.step7.CollectionBean"> 
+		<property name="addressList"> <list> <value>서울시 강남구 역삼동</value> <value>서울시 
+		성동구 행당동</value> </list> </property> </bean> -->
+
+
+	<!-- Set사용 (step8에서 사용) -->
+	<!-- <bean id = "collectionBean" class = "com.myspring.step8.CollectionBean"> 
+		<property name="addressList"> <set value-type = "java.lang.String"> <value>서울시 
+		강남구 역삼동</value> <value>서울시 성동구 성수동</value> <value>서울시 성동구 성수동</value> 중복을 
+		허용하지 않음 </set> </property> </bean> -->
+
+
+	<!-- Map사용 (step9에서 사용) -->
+	<bean id="collectionBean"
+		class="com.myspring.step9.CollectionBean">
+		<property name="addressList">
+			<map>
+				<entry>
+					<key>
+						<value>고길동</value>
+					</key>
+					<value>서울시 강남구 역삼동</value>
+				</entry>
+				<entry>
+					<key>
+						<value>마이클</value>
+					</key>
+					<value>서울시 강서구 화곡동</value>
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+
+
+
+</beans>
