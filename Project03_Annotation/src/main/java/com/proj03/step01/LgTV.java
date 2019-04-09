@@ -1,4 +1,4 @@
-package com.proj03.step1;
+package com.proj03.step01;
 
 import org.springframework.stereotype.Component;
 
@@ -22,6 +22,5 @@ public class LgTV implements TV{
 	public void volumeDown() {
 		System.out.println("LgTV---소리 내린다.");
 	}
-	
-	
+		
 }

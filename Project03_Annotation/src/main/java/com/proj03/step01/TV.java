@@ -1,4 +1,4 @@
-package com.proj03.step1;
+package com.proj03.step01;
 
 public interface TV {
 	public void powerOn();
