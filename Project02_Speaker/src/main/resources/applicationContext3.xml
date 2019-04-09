@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
 
-	<!-- list collection사용 (step7에서 사용) -->
+	<!-- List collection사용 (step7에서 사용) : 좀더 쉽게 사용가능 -->
 	<!-- <bean id="collectionBean" class="com.myspring.step7.CollectionBean"> 
 		<property name="addressList"> <list> <value>서울시 강남구 역삼동</value> <value>서울시 
 		성동구 행당동</value> </list> </property> </bean> -->
@@ -17,7 +19,7 @@
 
 
 	<!-- Map사용 (step9에서 사용) -->
-	<bean id="collectionBean"
+<!-- 	<bean id="collectionBean"
 		class="com.myspring.step9.CollectionBean">
 		<property name="addressList">
 			<map>
@@ -25,7 +27,7 @@
 					<key>
 						<value>고길동</value>
 					</key>
-					<value>서울시 강남구 역삼동</value>
+					<value>서울시 강남구 역삼동</value> 
 				</entry>
 				<entry>
 					<key>
@@ -35,9 +37,18 @@
 				</entry>
 			</map>
 		</property>
-	</bean>
-
-
+	</bean> -->
+	
+	
+<!-- Properties 객체 사용시  step10에서 사용-->
+<bean id="collectionBean" class="com.myspring.step10.CollectionBean">
+	<property name="addressList">
+		<props>
+			<prop key="고길동">서울시 강남구 역삼동</prop>
+			<prop key="마이콜">서울시 강서구 화곡동</prop>
+		</props>
+	</property>
+</bean>
 
 
 </beans>
